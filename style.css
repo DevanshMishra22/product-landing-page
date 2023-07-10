@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+   background: linear-gradient(90deg, #ba95c0 50%, #8a7ab8 50%);
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.wrapper {
+   background-color: aliceblue;
+   width: 110%;
+   height: 90vh;
+}
+
+.navbar .logo {
+   width: 60px;
+   height: 60px;
+   background-color: transparent;
+   border: 3px solid rgb(105, 67, 143);
+   border-radius: 50%;
+   border-right-color: transparent;
+   position: relative;
+}
+
+.navbar .logo::before {
+   content: "Beautyfy.com";
+   color: rgb(158, 15, 201);
+   font-size: 25px;
+   position: absolute;
+   top: 45%;
+   left: 39%;
+   transform: translate(-10%, -50%);
+   font-family: 'Pacifico', cursive;
+}
+
+.navbar {
+   width: 90%;
+   margin: auto;
+   height: 15vh;
+}
+
+.navbar,
+.navlist {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.navlist li {
+   list-style: none;
+   padding: 23px;
+}
+
+.navlist a {
+   color: black;
+   font-size: 1.3rem;
+   text-decoration: none;
+   position: relative;
+}
+
+.navlist a::before {
+   content: "";
+   position: absolute;
+   bottom: -10px;
+   left: 0;
+   width: 0;
+   height: 2px;
+   background-color: black;
+   transition: 0.5s ease-in-out;
+}
+
+.navlist a:hover::before {
+   width: 100%;
+}
+
+.tvs {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 50px;
+
+}
+
+.tvs img {
+   width: 45vw;
+   /* height: 345px; */
+}
+
+.contant {
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   flex-direction: column;
+   gap: 20px;
+   border-left: 4px solid #8669d1fa;
+   padding: 20px 50px;
+}
+
+.contant h2 {
+   color: rgb(84, 69, 107);
+   font-size: 20px;
+   text-transform: uppercase;
+   letter-spacing: 3px;
+}
+
+.contant h1 {
+   color: #8669d1fa;
+   font-size: 50px;
+}
+
+.contant p {
+   color: rgb(49, 49, 47);
+   font-size: 18px;
+   line-height: 30px;
+}
+
+.contant button {
+   padding: 15px 30px;
+   font-size: 18px;
+   color: white;
+   border: none;
+   background-color: #8a7ab8;
+   cursor: pointer;
+}
+
+.contant button:hover {
+   background-color: aliceblue;
+   color: #8669d1fa;
+
+}
+
+.hamburger {
+   display: none;
+}
+
+.hamburger span {
+   height: 4px;
+   width: 15px;
+   background-color: black;
+   display: block;
+   margin: 5px;
+}
+
+.hamburger :nth-child(2) {
+   width: 30px;
+}
+
+/* MEDIA QUERRY  */
+
+
+@media screen and (max-width: 1207px) {
+   c.contant h1 {
+      font-size: 45px;
+   }
+
+   .contant p {
+      font-size: 17px;
+      line-height: 25px;
+   }
+   .tvs img {
+      width: 45vw;
+      height: 345px;
+   }
+
+}
+
+@media screen and (max-width: 1110px) {
+   .contant{
+      padding: 0px 40px;
+      gap: 10px;
+   }
+   .contant h1{
+      font-size: 40px;
+
+   }
+
+}
+
+@media screen and (max-width: 800px) {
+   .wrapper {
+      position: relative;
+      overflow: hidden;
+   }
+
+   .navlist {
+      /* display: none; */
+      position: absolute;
+      flex-direction: column;
+      top: 0;
+      right: -70%;
+      background-color: #ba95c0;
+      width: 300px;
+      height: 100%;
+      justify-content: center;
+      transition: .5s ease-in-out;
+
+   }
+
+   .navlist-active {
+      right: 0;
+   }
+
+   .hamburger {
+      display: block;
+      z-index: 5;
+   }
+   .tvs img {
+      display: none;
+   }
+   .contant h1{
+      font-size: 50px;
+
+   }
+   .contant{
+      font-size: 18px;
+      line-height: 30px;
+   }
+   .contant{
+      padding: 20px 50px;
+      gap: 20px;
+   }
+}
+
+
+@media screen and (max-width:461px)
+{
+
+.contant h1{
+   font-size: 30px;
+}
+.contant p{
+   font-size: 10px;
+}
+.contant h2{
+   font-size: 20px;
+}
+.navbar{
+   height: 60px;
+}
+
+}
